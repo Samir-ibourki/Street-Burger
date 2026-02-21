@@ -55,10 +55,7 @@ const Header = () => {
   });
 
   return (
-    <header
-      className="h-11 fixed w-full z-50 flex justify-between items-center py-8 px-8 md:px-16 transition-all"
-      style={{ backgroundColor: "#2e2014" }}
-    >
+    <header className="h-11 fixed w-full z-50 flex justify-between items-center py-8 px-8 md:px-16 transition-all bg-[#2e2014]">
       {/* Logo */}
       <div className="header-logo w-14 h-14">
         <img
@@ -70,14 +67,17 @@ const Header = () => {
 
       {/* Nav */}
       <nav className="flex items-center gap-10">
-        {["Home", "Menu", "Contact Us"].map((item) => (
+        {[
+          { label: "Home", href: "#" },
+          { label: "Menu", href: "#menu" },
+          { label: "Contact Us", href: "#contact" },
+        ].map((item) => (
           <a
-            key={item}
-            href="#"
+            key={item.label}
+            href={item.href}
             className="nav-link relative text-sm text-white/80 hover:text-[#e8a045] transition-colors duration-300 group"
           >
-            {item}
-            {/* underline hover effect */}
+            {item.label}
             <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#e8a045] transition-all duration-300 group-hover:w-full" />
           </a>
         ))}
