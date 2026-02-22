@@ -5,7 +5,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import MenuCard from "./MenuCard";
 import { MENU_ITEMS } from "../data/menuItems";
-import { animateMenuTitle, animateMenuCards } from "../animations/menuAnimations";
+import {
+  animateMenuTitle,
+  animateMenuCards,
+} from "../animations/menuAnimations";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,9 +40,12 @@ export const Menu = () => {
       id="menu"
       ref={sectionRef}
       className="relative py-24 px-6 md:px-16 lg:px-24 overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #1a1209 0%, #0d0a05 50%, #1a1209 100%)" }}
+      style={{
+        background:
+          "linear-gradient(180deg, #1a1209 0%, #0d0a05 50%, #1a1209 100%)",
+      }}
     >
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-[#e8a045]/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-150 h-150 rounded-full bg-[#e8a045]/5 blur-[120px] pointer-events-none" />
 
       <div className="text-center mb-16 relative z-10">
         <div className="menu-badge inline-flex items-center gap-2 px-4 py-1 rounded-full border border-[#e8a045]/30 text-[#e8a045] text-xs tracking-[0.3em] uppercase backdrop-blur-sm bg-black/20 mb-6">

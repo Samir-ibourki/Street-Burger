@@ -1,6 +1,6 @@
 import gsap from "gsap";
 
-// ── Section Entrance ───────────────────────────────────────
+// ── Section Entrance 
 export const animateContactTitle = (tl) => {
   tl.fromTo(
     ".contact-badge",
@@ -21,7 +21,7 @@ export const animateContactTitle = (tl) => {
     );
 };
 
-// ── Info Cards Stagger ─────────────────────────────────────
+// ── Info Cards Stagger 
 export const animateInfoCards = (cards) => {
   gsap.fromTo(
     cards,
@@ -40,7 +40,7 @@ export const animateInfoCards = (cards) => {
   );
 };
 
-// ── Form Entrance ──────────────────────────────────────────
+// ── Form Entrance 
 export const animateForm = (form) => {
   gsap.fromTo(
     form,
